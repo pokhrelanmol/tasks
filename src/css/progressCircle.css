@@ -3,24 +3,69 @@ body{
    justify-content: center;
    align-items: center;
    height: 100vh;
+   background-color: #ddecf0;
 }
-.box .percent svg circle{
-   height: 150px;
-   width: 150px;
-   fill: none;
-   stroke-width: 10;
-   stroke: #000;
-   transform: translate(5px,5px);
-   stroke-dasharray: 440;
-   stroke-dashoffset: 440;
+.circular{
+   height: 100px;
+   width:  100px;
+   background-color: rebeccapurple;
+   position: relative;
+   transform: scale(2);
+
 
 }
-.box .percent svg circle:nth-child(1){
+.circular .inner{
 
-   stroke-dashoffset: 0;
-   stroke: antiquewhite;
+   position: absolute;
+   z-index: 6;
+   top: 50%;
+   left: 50%;
+   height: 80px;
+   width: 80px;
+   background:#ddecf0;
+   margin: -40px 0 0 -40px;
+   border-radius: 50%;
 }
-.box .percent svg circle:nth-child(2){
-   stroke: aqua;
-   /* stroke-dashoffset: 3; */
+.circular .bar {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: white;
+   border-radius: 100%;
+   clip: rect(0px,100px,100px,50px);
+
+}
+.circle .bar .progress{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: white;
+   border-radius: 100%;
+   clip: rect(0px,50px,100px,0px);
+   background: #5158d0;
+
+}
+.circle .left .progress{
+z-index: 1;
+animation: left 4s linear both;
+}
+@keyframes left{
+100%{
+   transform: rotate(180deg);
+}
+}
+.circle .right{
+transform: rotate(180deg);
+z-index: 3;
+
+}
+.circle .right .progress{
+
+animation: right 4s linear both;
+animation-delay: 4s;
+}
+@keyframes right{
+100%{
+   transform: rotate(180deg);
+}
 }
