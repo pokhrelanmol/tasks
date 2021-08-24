@@ -1,9 +1,9 @@
 import React from 'react'
 import ContenrEditable from './Components/ContenrEditable'
 import HoverEffect from './Components/HoverEffect'
-// import CreditCard from './Components/CreditCard'
+import CreditCard from './Components/CreditCard'
 import ShowInput from './ShowInput'
-// import ProgressCircle from './Components/ProgressCircle'
+import ProgressCircle from './Components/ProgressCircle'
 
 const App = () => {
       return (
@@ -11,8 +11,8 @@ const App = () => {
             {/* <ProgressCircle/> */}
             {/* <CreditCard/> */}
             {/* <ShowInput/> */}
-            {/* <ContenrEditable/> */}
-            <HoverEffect/>
+            <ContenrEditable/>
+            {/* <HoverEffect/> */}
             </>
       )
 }

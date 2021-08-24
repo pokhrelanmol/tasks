@@ -8,6 +8,7 @@ specifiers:
   react-contenteditable: ^3.3.6
   react-dom: ^17.0.2
   react-scripts: 4.0.3
+  react-tilt: ^0.1.4
   uniqid: ^5.4.0
   web-vitals: ^1.1.2
 
@@ -19,6 +20,7 @@ dependencies:
   react-contenteditable: 3.3.6_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-scripts: 4.0.3_react@17.0.2
+  react-tilt: 0.1.4_react-dom@17.0.2+react@17.0.2
   uniqid: 5.4.0
   web-vitals: 1.1.2
 
@@ -9514,6 +9516,16 @@ packages:
       - webpack-command
       - webpack-hot-middleware
       - webpack-plugin-serve
+    dev: false
+
+  /react-tilt/0.1.4_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-bVeRumg+RIn6QN8S92UmubGqX/BG6/QeQISBeAcrS/70dpo/jVj+sjikIawDl5wTuPdubFH8zH0EMulWIctsnw==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0-beta || ^16.0.0
+      react-dom: ^15.0.0 || ^16.0.0-beta || ^16.0.0
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react/17.0.2:

@@ -15,34 +15,48 @@ const ContenrEditable = () => {
     text.current = e.target.value;
     const newUserInput = [...userText];
     newUserInput[indx].userInput = e.target.value;
-   
+
     setUserText(newUserInput);
   };
-  const handleEnterPress = (e,index) => {
+  const[index,setIndex] = useState(null)
+  const handleEnterPress = (e, index) => {
+    // implementing logic so whenever user press /"any html tag" we can display it
     if (e.keyCode == 13) {
-//  if (text.current.includes("/")) {
-//       const indexOfSlash = text.current.indexOf("/");
-//       // console.log(text.current.slice(indexOfSlash +1,3))
-//       setTag(userText[index].text.current.slice(indexOfSlash + 1, text.current.length));
-//     }
+      const allUserInput = [...userText];
+      const elementOfClickedIndex = allUserInput[index].userInput;
+      if (elementOfClickedIndex.includes("/")) {
+        const indexOfSlash = elementOfClickedIndex.indexOf("/");
+        // console.log(allUserInput[index].userInput.slice(indexOfSlash +1,3))
+        setTag(
+          allUserInput[index].userInput.slice(
+            indexOfSlash + 1,
+            elementOfClickedIndex.length
+          )
+        );
+        setIndex(index)
+      }
       setUserText([...userText, { userInput: " " }]);
     }
   };
 
   return (
     <>
-        Notion text editor 
-      {userText.map((value, index) => {
-               return (
+      Notion text editor
+      {userText.map((value, indx) => {
+        
+        return (
           <ContentEditable
-            tagName={tag}
-            html={value.userInput ? value.userInput : ""}
-            onChange={(e) => handleChange(e, index)}
-            onKeyDown={(e) => handleEnterPress(e,index)}
-            style={{ border: "1px solid black",width:"50vw",margin:"1rem auto", }}
+            tagName={indx===index?tag:'h1'}
+            html={indx===index? "":value.userInput||""}
+            onChange={(e) => handleChange(e, indx)}
+            onKeyDown={(e) => handleEnterPress(e, indx)}
+            style={{
+              border: "1px solid black",
+              width: "50vw",
+              margin: "1rem auto",
+            }}
           />
         );
-
       })}
     </>
   );
