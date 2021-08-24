@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
-
+import React, { useRef, useState } from 'react'
+import ContentEditable from 'react-contenteditable'
 const ShowInput = () => {
       let[input,setInput] = useState([{someText:""}])
-      
  const handleChange =(index,e)=>{
        let newFormValue = [...input]
        newFormValue[index][e.target.name] = e.target.value
@@ -10,25 +9,30 @@ const ShowInput = () => {
  }
  const  onEnterPress=(e)=>{
        if(e.keyCode ===13){
-
-       setInput([...input, { name: "", email: "" }])
+                   setInput([...input, {someText:e.target.value}])
        }
  }
 
+ const remove =(id)=>{
+  let newFormValue = [...input]
+  newFormValue.splice(id,1)
+  setInput(newFormValue)
+ }
+
       return (
-            <div>
-            {input.map((input,index)=>{
+            <div key={input.length+1} style={{alignItems:"center"}} >
+            {input.map((elem,index)=>{
             return(
                   <>
-            <input type="text" name='something'onChange={(e)=>handleChange(index,e)} onKeyDown={onEnterPress} value={input.someTexth} />    
+            <input placeholder="write something and enter" type="text" name='something'onChange={(e)=>handleChange(index,e)} onKeyDown={onEnterPress} value={input.someText}  />    
+            {/* <ContentEditable name = "something" html={text.current} tagName="h1" style={{display:"inline-block",border:"1px solid red",padding:"1rem 2rem"}} onChange={(e)=>handleChange(index,e)} onKeyDown={onEnterPress} /> */}
+            <button  onClick ={()=>remove(index)}>remove</button>
+   <div> {elem.someText}</div> 
   
                   </>
             )      
 
             })}
 
-            </div>
-      )
-}
-
+            </div>) }
 export default ShowInput

@@ -1,4 +1,5 @@
 import React from 'react'
+import ContenrEditable from './Components/ContenrEditable'
 // import CreditCard from './Components/CreditCard'
 import ShowInput from './ShowInput'
 // import ProgressCircle from './Components/ProgressCircle'
@@ -8,7 +9,8 @@ const App = () => {
             <>
             {/* <ProgressCircle/> */}
             {/* <CreditCard/> */}
-            <ShowInput/>
+            {/* <ShowInput/> */}
+            <ContenrEditable/>
             </>
       )
 }
