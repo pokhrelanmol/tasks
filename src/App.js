@@ -4,6 +4,7 @@ import HoverEffect from './Components/HoverEffect'
 import CreditCard from './Components/CreditCard'
 import ShowInput from './ShowInput'
 import ProgressCircle from './Components/ProgressCircle'
+import LoadingCircle from './Components/LoadingCircle'
 
 const App = () => {
       return (
@@ -11,7 +12,8 @@ const App = () => {
             {/* <ProgressCircle/> */}
             {/* <CreditCard/> */}
             {/* <ShowInput/> */}
-            <ContenrEditable/>
+            {/* <ContenrEditable/> */}
+            <LoadingCircle/>
             {/* <HoverEffect/> */}
             </>
       )
