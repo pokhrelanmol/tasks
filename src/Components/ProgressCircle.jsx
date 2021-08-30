@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/progressCircle.css";
 
-const ProgressCircle = () => {
-  const [value, setvalue] = useState('');
-  const [stroke, setStroke] = useState("440");
+export default function ProgressCircle() {
+  const[value, setValue] = useState('');
+  const[stroke, setStroke] = useState("440");
   const handleChange = (e) => {
-    setvalue(e.target.value);
-    setStroke(value?440-value.length*2.44:440)
+    setValue(e.target.value);
+    const strokeVal =value?440-value.length*2.44:440 
+    setStroke(strokeVal)
   };
 
-  // useEffect(() => {
-  //   setStroke(`${stroke - 2.44}`);
-  // }, [value]);
+  
 
   return (
     <>
@@ -36,4 +35,3 @@ const ProgressCircle = () => {
   );
 };
 
-export default ProgressCircle;

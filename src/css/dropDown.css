@@ -1,0 +1,12 @@
+.dropdown{
+      width: fit-content;
+      height: fit-content;
+}
+#select{
+      padding: .2rem .6rem;
+}
+#select option{
+      margin-left: 2rem;
+      color: rgb(107, 104, 104);
+      cursor: pointer;
+}

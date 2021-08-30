@@ -3,7 +3,9 @@ import "../css/creditCard.css";
 import Tilt from "react-tilt";
 const CreditCard = () => {
   return (
+    <>
     <div className="main-div">
+    <h2>Hover Me</h2>
       <Tilt
         className="Tilt"
         options={{ max: 25 }}
@@ -23,6 +25,7 @@ const CreditCard = () => {
         </div>
       </Tilt>
     </div>
+    </>
   );
 };
 
