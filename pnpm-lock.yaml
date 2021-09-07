@@ -7,6 +7,7 @@ specifiers:
   react: ^17.0.2
   react-contenteditable: ^3.3.6
   react-dom: ^17.0.2
+  react-hook-form: ^7.15.0
   react-router-dom: ^5.2.1
   react-scripts: 4.0.3
   react-tilt: ^0.1.4
@@ -20,6 +21,7 @@ dependencies:
   react: 17.0.2
   react-contenteditable: 3.3.6_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-hook-form: 7.15.0_react@17.0.2
   react-router-dom: 5.2.1_react@17.0.2
   react-scripts: 4.0.3_react@17.0.2
   react-tilt: 0.1.4_react-dom@17.0.2+react@17.0.2
@@ -9454,6 +9456,14 @@ packages:
 
   /react-error-overlay/6.0.9:
     resolution: {integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==}
+    dev: false
+
+  /react-hook-form/7.15.0_react@17.0.2:
+    resolution: {integrity: sha512-UWEkNhcTvA+o/FUZ2RMvpKgxxEg0rJqEjHMDwh3I4TIdHX38TtN8IywyGieqeWLiHEpoNVOuEhLVPZ9/srXUhA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:

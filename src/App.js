@@ -7,28 +7,27 @@ import LoadingCircle from "./Components/LoadingCircle";
 import DropDown from "./Components/DropDown";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { RouteContext } from "./context/RoutesContext";
+import FormValidation from "./Components/FormValidation";
 
 const App = () => {
- const {route} = useContext(RouteContext) 
- console.log(route)
+  const { route } = useContext(RouteContext);
+  console.log(route);
   return (
     <BrowserRouter>
       <DropDown />
+      <FormValidation />
       <Switch>
-            
         <Route exact path={"/creditCard"}>
-          <CreditCard/> 
+          <CreditCard />
         </Route>
-        
-      
-        <Route  exact path="/progressCircle" component={ProgressCircle} />
-        <Route  exact path="/showInputOnEnter" component={ContenrEditable} />
-        <Route  exact path="/loadingCircle" component={LoadingCircle} />
-        <Route exact 
+        <Route exact path="/progressCircle" component={ProgressCircle} />
+        <Route exact path="/showInputOnEnter" component={ContenrEditable} />
+        <Route exact path="/loadingCircle" component={LoadingCircle} />
+        <Route
+          exact
           path="/imageDetailsOnMouseMove"
-           component={ShowImageDetailsOnMouseMove}
+          component={ShowImageDetailsOnMouseMove}
         />
-        <Route component={()=>{ return <h1> Opps! Page Not Found</h1>}}/>
       </Switch>
     </BrowserRouter>
   );
